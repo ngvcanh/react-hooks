@@ -1,6 +1,24 @@
 # react-hooks
 Customize hooks for React
 
+## Installation
+
+```sh
+npm install @kensoni/react-hooks
+
+# Or yarn
+yarn add @kensoni/react-hooks
+```
+
+## Preview with Storybook
+
+```
+git clone https://github.com/ngvcanh/react-hooks.git
+cd react-hooks
+yarn install
+yarn start
+```
+
 ## useClickOutside()
 
 Listen events when click/touch outside the element.
