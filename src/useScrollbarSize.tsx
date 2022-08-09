@@ -12,7 +12,7 @@ const css: CSSProperties = {
 
 let scrollbarSize = -1;
 
-const getScrollbarSize = () => {
+export const getScrollbarSize = () => {
   if (typeof document === "undefined") return 0;
   const div = document.createElement('div');
   
@@ -33,6 +33,7 @@ export default function useScrollbarSize(forceUpdate = false){
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  if (forceUpdate || scrollbarSize <= 0) scrollbarSize = getScrollbarSize();
   return Math.max(scrollbarSize, 0);
 
 }
