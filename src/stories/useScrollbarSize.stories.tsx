@@ -1,6 +1,6 @@
 import React from "react";
-import { Story } from '@storybook/react';
 import useScrollbarSize from "../useScrollbarSize";
+import { Story } from '@storybook/react';
 
 export default {
   title: 'Hooks/useScrollbarSize()'

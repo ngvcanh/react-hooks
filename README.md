@@ -71,6 +71,25 @@ export default function App(){
 }
 ```
 
+## useForceUpdate()
+
+Force update component
+
+```tsx
+import useForceUpdate from '@kensoni/react-hooks/useForceUpdate';
+
+export default function App(){
+
+  const forceUpdate = useForceUpdate();
+
+  return <div>
+    App
+
+    <button onClick={ forceUpdate }>Force update app</button>
+  </div>
+}
+```
+
 ## useScrollbarSize()
 
 Get scrollbar size on browser.
