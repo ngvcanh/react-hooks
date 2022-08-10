@@ -71,6 +71,33 @@ export default function App(){
 }
 ```
 
+## useEmitControl(ref)
+
+```tsx
+import React, { KeyboardEvent, useRef } from 'react';
+import useEmitControl from '@kensoni/react-hooks/useEmitControl';
+
+export default function App(){
+
+  const inputRef = useRef<HTMLInputElement>(null);
+  const emitInput = useEmitControl(inputRef);
+
+  const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    emitInput('change', 'new value');
+  }
+
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log('onchange', e.target.value);
+  }
+
+  return <div>
+    <input ref={ inputRef } onKeyDown={ onKeyDown } onChange={ onChange } />
+  </div>
+
+}
+```
+
 ## useForceUpdate()
 
 Force update component

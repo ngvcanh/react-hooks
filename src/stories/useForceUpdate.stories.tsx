@@ -3,7 +3,7 @@ import useForceUpdate from '../useForceUpdate';
 import { Story } from "@storybook/react";
 
 export default {
-  title: 'Hooks/useForceUpdate'
+  title: 'Hooks/useForceUpdate()'
 }
 
 let clicked = 0;
